@@ -27,12 +27,42 @@
         background-color: green;
       }
     </style>
+    <script>
+      const lightStylesheet = document.getElementById('lightStylesheet');
+      const darkStylesheet = document.getElementById('darkStylesheet');
+
+      function processQueryString() {
+        const mode = new URLSearchParams(location.search).get('mode');
+        if(mode === 'light') {
+          lightStylesheet.disabled = false;
+          darkStylesheet.disabled = true;
+        } else if (mode === 'dark') {
+          lightStylesheet.disabled = true;
+          darkStylesheet.disabled = false;
+        }
+      }
+
+      function toggleDarkMode() {
+        lightStylesheet.disabled = !lightStylesheet.disabled;
+        darkStylesheet.disabled = !darkStylesheet.disabled;
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        processQueryString();
+
+        const toggleButton = document.getElementById('toggle-dark-mode');
+        toggleButton.addEventListener('click', toggleDarkMode);
+      });
+    </script>
   </head>
   <body>
     <header>
       <h1>Duo Budget - Product Vision Board</h1>
       <hr class="top-hr">
       <hr class="bottom-hr">
+      <nav>
+        <button id="toggle-dark-mode">Toggle dark mode</button>
+      </nav>
     </header>
     <main>
       <section>
