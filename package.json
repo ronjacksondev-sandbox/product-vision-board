@@ -1,0 +1,25 @@
+{
+  "name": "product-vision-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server . -a localhost -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronjacksondev-sandbox/product-vision-board.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ronjacksondev-sandbox/product-vision-board/issues"
+  },
+  "homepage": "https://github.com/ronjacksondev-sandbox/product-vision-board#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
